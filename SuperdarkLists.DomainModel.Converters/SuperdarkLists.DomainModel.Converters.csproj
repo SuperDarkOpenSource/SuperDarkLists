@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SuperdarkLists.Common\SuperdarkLists.Common.csproj" />
+      <ProjectReference Include="..\SuperdarkLists.DomainModel.Database\SuperdarkLists.DomainModel.Database.csproj" />
+      <ProjectReference Include="..\SuperdarkLists.DomainModel.Rest\SuperdarkLists.DomainModel.Rest.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Class1.cs" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "SuperdarkLists": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "local",
+        "ASPNETCORE_URLS": "https://localhost:6969"
+      }
+    }
+  }
+}
