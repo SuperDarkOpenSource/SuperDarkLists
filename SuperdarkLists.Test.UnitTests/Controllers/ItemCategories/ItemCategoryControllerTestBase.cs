@@ -1,3 +1,8 @@
+using HttpContextMoq;
+using HttpContextMoq.Extensions;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Moq;
 using SuperdarkLists.Api.v1;
 using SuperdarkLists.DomainModel.Database.Model;
 using SuperdarkLists.Test.Common.Database;
@@ -8,14 +13,23 @@ namespace SuperdarkLists.Test.UnitTests.Controllers.ItemCategories;
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 public class ItemCategoryControllerTestBase
 {
+    protected string Url { get; set; } = "https://example.com/api/v1/item-category";
     protected MockDatabaseContext _mockDatabaseContext = new();
-
-    protected ItemCategoriesController UnitUnderTest;
+    protected ItemCategoriesController UnitUnderTest { get; private set; }
     
     [SetUp]
     public void Setup()
     {
-        UnitUnderTest = new ItemCategoriesController(_mockDatabaseContext);
+        var mockHttpContext = new HttpContextMock();
+        mockHttpContext.SetupUrl(Url);
+        
+        UnitUnderTest = new ItemCategoriesController(_mockDatabaseContext)
+        {
+            ControllerContext = new ControllerContext()
+            {
+                HttpContext = mockHttpContext
+            },
+        };
     }
 
     protected void GenerateFakeItemCategoryData(int amount)
