@@ -1,7 +1,6 @@
 using Autofac;
+using Microsoft.EntityFrameworkCore;
 using SuperdarkLists.DomainModel.Database;
-using SuperdarkLists.DomainModel.Database.Providers;
-using SuperdarkLists.Providers;
 
 namespace SuperdarkLists;
 
@@ -9,9 +8,16 @@ public class SuperdarkListsModule : Module
 {
     protected override void Load(ContainerBuilder builder)
     {
-        builder.RegisterType<DatabaseConnectionStringProvider>().As<IDatabaseConnectionStringProvider>()
-            .SingleInstance();
-        
-        builder.RegisterModule(new DatabaseModule());
+        builder.Register<ListDatabaseContext>(context =>
+            {
+                var config = context.Resolve<IConfiguration>();
+
+                var optionsBuilder = new DbContextOptionsBuilder<ListDatabaseContext>();
+                optionsBuilder.UseNpgsql(config.GetConnectionString("Database"));
+
+                return new ListDatabaseContext(optionsBuilder.Options);
+            })
+            .AsSelf()
+            .InstancePerLifetimeScope();
     }
 }
