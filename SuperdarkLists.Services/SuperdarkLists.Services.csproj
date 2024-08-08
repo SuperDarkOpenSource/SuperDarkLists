@@ -7,7 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+      <ProjectReference Include="..\SuperdarkLists.Common\SuperdarkLists.Common.csproj" />
+      <ProjectReference Include="..\SuperdarkLists.DomainModel\SuperdarkLists.DomainModel.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Autofac" Version="8.0.0" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
     </ItemGroup>
 

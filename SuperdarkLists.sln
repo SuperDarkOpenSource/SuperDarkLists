@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperdarkLists.Test.UnitTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperdarkLists.DomainModel", "SuperdarkLists.DomainModel\SuperdarkLists.DomainModel.csproj", "{F99FAB60-A5A9-4189-BCA7-4F494716A88C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperdarkLists.Services", "SuperdarkLists.Services\SuperdarkLists.Services.csproj", "{BC1108D5-6457-4544-BCFE-9760A0EAE265}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{F99FAB60-A5A9-4189-BCA7-4F494716A88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F99FAB60-A5A9-4189-BCA7-4F494716A88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F99FAB60-A5A9-4189-BCA7-4F494716A88C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC1108D5-6457-4544-BCFE-9760A0EAE265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1108D5-6457-4544-BCFE-9760A0EAE265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1108D5-6457-4544-BCFE-9760A0EAE265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1108D5-6457-4544-BCFE-9760A0EAE265}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C6ECA938-E349-41A1-AB06-C223A1B59116} = {2A59DA61-87E8-4CDE-BE63-3F43E6E48236}

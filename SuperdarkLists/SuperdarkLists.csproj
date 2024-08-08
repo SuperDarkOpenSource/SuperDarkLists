@@ -10,14 +10,15 @@
       <ProjectReference Include="..\SuperdarkLists.Api.v1\SuperdarkLists.Api.v1.csproj" />
       <ProjectReference Include="..\SuperdarkLists.Common\SuperdarkLists.Common.csproj" />
       <ProjectReference Include="..\SuperdarkLists.DomainModel\SuperdarkLists.DomainModel.csproj" />
+      <ProjectReference Include="..\SuperdarkLists.Services\SuperdarkLists.Services.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Autofac" Version="8.0.0" />
       <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="9.0.0" />
-      <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.4" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.7" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-      <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+      <PackageReference Include="Serilog.AspNetCore" Version="8.0.2" />
     </ItemGroup>
 
 </Project>
