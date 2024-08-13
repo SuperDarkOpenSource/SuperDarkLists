@@ -88,10 +88,10 @@ internal static class Program
 
             await app.RunAsync();
         }
-        catch (Exception e)
+        catch (Exception e) when (e.Source != "Microsoft.EntityFrameworkCore.Design") // see https://github.com/dotnet/efcore/issues/29923
         {
             // Suppress the application killing exception and log it
-            Log.Fatal(e, "Application has terminated with an exception...");
+            Log.Fatal(e, "SuperdarkLists has terminated with an exception...");
         }
         finally
         {
